@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Pacifico, Dancing_Script, Montserrat } from 'next/font/google'
 import "./globals.css";
 
 const geistSans = localFont({
@@ -7,11 +8,33 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+
+const pacifico = Pacifico({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-pacifico',
+  display: 'swap',
+})
+
+const dancingScript = Dancing_Script({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-dancing-script',
+  display: 'swap',
+})
+
+const montserrat = Montserrat({
+  weight: ['300', '600'],
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} ${dancingScript.variable} ${montserrat.variable} antialiased`}
       >
         {children}
       </body>
