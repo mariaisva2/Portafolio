@@ -2,7 +2,6 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa'; 
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 // Estilos usando styled-components
